@@ -1,0 +1,224 @@
+
+C:\Users\labsfiap>cd Users\labsfiap
+The system cannot find the path specified.
+
+C:\Users\labsfiap>cd users
+The system cannot find the path specified.
+
+C:\Users\labsfiap>cd Users
+The system cannot find the path specified.
+
+C:\Users\labsfiap>cd Downloads
+
+C:\Users\labsfiap\Downloads>cd exemploGIT
+
+C:\Users\labsfiap\Downloads\exemploGIT>git config --global user.email henriquealves4624@gmail.com
+
+C:\Users\labsfiap\Downloads\exemploGIT>git clone https://github.com/henriquealves4624/3SIR-ProjetoTesteGit.git
+Cloning into '3SIR-ProjetoTesteGit'...
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (17/17), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 17 (delta 1), reused 10 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (17/17), 16.84 KiB | 4.21 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+
+C:\Users\labsfiap\Downloads\exemploGIT>dir
+ Volume in drive C is System
+ Volume Serial Number is 9E7D-C35A
+
+ Directory of C:\Users\labsfiap\Downloads\exemploGIT
+
+29/04/2025  19:28    <DIR>          .
+29/04/2025  19:28    <DIR>          ..
+29/04/2025  19:28    <DIR>          3SIR-ProjetoTesteGit
+               0 File(s)              0 bytes
+               3 Dir(s)  83.895.545.856 bytes free
+
+C:\Users\labsfiap\Downloads\exemploGIT>cd 3SIR-ProjetoTesteGit
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git flow init
+
+Which branch should be used for bringing forth production releases?
+   - main
+Branch name for production releases: [main]
+Branch name for "next release" development: [develop]
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/]
+Bugfix branches? [bugfix/]
+Release branches? [release/]
+Hotfix branches? [hotfix/]
+Support branches? [support/]
+Version tag prefix? []
+Hooks and filters directory? [C:/Users/labsfiap/Downloads/exemploGIT/3SIR-ProjetoTesteGit/.git/hooks]
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git branch
+* develop
+  main
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git flow feature start TarefaLocal01
+Switched to a new branch 'feature/TarefaLocal01'
+
+Summary of actions:
+- A new branch 'feature/TarefaLocal01' was created, based on 'develop'
+- You are now on branch 'feature/TarefaLocal01'
+
+Now, start committing on your feature. When done, use:
+
+     git flow feature finish TarefaLocal01
+
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git branch
+  develop
+* feature/TarefaLocal01
+  main
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git status
+On branch feature/TarefaLocal01
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ApresentacaoPitchProjeto.pptx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git add .
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git status
+On branch feature/TarefaLocal01
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ApresentacaoPitchProjeto.pptx
+
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git commit -m "Criacao Pitch"
+[feature/TarefaLocal01 e555476] Criacao Pitch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 ApresentacaoPitchProjeto.pptx
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git status
+On branch feature/TarefaLocal01
+nothing to commit, working tree clean
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git flow feature finish TarefaLocal01
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+Updating 1cc37db..e555476
+Fast-forward
+ ApresentacaoPitchProjeto.pptx | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 ApresentacaoPitchProjeto.pptx
+Deleted branch feature/TarefaLocal01 (was e555476).
+
+Summary of actions:
+- The feature branch 'feature/TarefaLocal01' was merged into 'develop'
+- Feature branch 'feature/TarefaLocal01' has been locally deleted
+- You are now on branch 'develop'
+
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git push -u origin develop
+To https://github.com/henriquealves4624/3SIR-ProjetoTesteGit.git
+ ! [rejected]        develop -> develop (fetch first)
+error: failed to push some refs to 'https://github.com/henriquealves4624/3SIR-ProjetoTesteGit.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git fetch
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 22.25 KiB | 1.85 MiB/s, done.
+From https://github.com/henriquealves4624/3SIR-ProjetoTesteGit
+   1cc37db..892c495  develop    -> origin/develop
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git pull --all
+Merge made by the 'ort' strategy.
+ PastaDocumentos/teste.mpp | Bin 0 -> 180224 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 PastaDocumentos/teste.mpp
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git fetch
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git pull --all
+Already up to date.
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git branch
+* develop
+  main
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git push -u origin develop
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 685 bytes | 685.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/henriquealves4624/3SIR-ProjetoTesteGit.git
+   892c495..c72992f  develop -> develop
+branch 'develop' set up to track 'origin/develop'.
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git flow release start SiTesteV01
+Switched to a new branch 'release/SiTesteV01'
+
+Summary of actions:
+- A new branch 'release/SiTesteV01' was created, based on 'develop'
+- You are now on branch 'release/SiTesteV01'
+
+Follow-up actions:
+- Bump the version number now!
+- Start committing last-minute fixes in preparing your release
+- When done, run:
+
+     git flow release finish 'SiTesteV01'
+
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git flow release finish SiTesteV01 -m "Versao 01 do App"
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Merge made by the 'ort' strategy.
+ ApresentacaoPitchProjeto.pptx           |   0
+ PastaDocumentos/CheckPoint1-python.docx | Bin 0 -> 15239 bytes
+ PastaDocumentos/README.md               |   1 +
+ PastaDocumentos/teste.mpp               | Bin 0 -> 180224 bytes
+ PastaFontes/README.md                   |   6 ++++++
+ 5 files changed, 7 insertions(+)
+ create mode 100644 ApresentacaoPitchProjeto.pptx
+ create mode 100644 PastaDocumentos/CheckPoint1-python.docx
+ create mode 100644 PastaDocumentos/README.md
+ create mode 100644 PastaDocumentos/teste.mpp
+ create mode 100644 PastaFontes/README.md
+Already on 'main'
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+Merge made by the 'ort' strategy.
+Deleted branch release/SiTesteV01 (was c72992f).
+
+Summary of actions:
+- Release branch 'release/SiTesteV01' has been merged into 'main'
+- The release was tagged 'SiTesteV01'
+- Release tag 'SiTesteV01' has been back-merged into 'develop'
+- Release branch 'release/SiTesteV01' has been locally deleted
+- You are now on branch 'develop'
+
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git branch
+* develop
+  main
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>git branch
+  develop
+* main
+
+C:\Users\labsfiap\Downloads\exemploGIT\3SIR-ProjetoTesteGit>
